@@ -12,6 +12,7 @@
     var vm = this;
     vm.meme = playerUser.getMemeChoice().imageUrl;
     vm.submitCreation = submitCreation;
+    vm.goBack = goBack;
     vm.bottomText = '';
     vm.topText = '';
 
@@ -36,6 +37,11 @@
 
         $state.go('home.waiting');
       }
+    }
+
+    // take the user back to the choosing page
+    function goBack() {
+      $state.go('home.choosing');
     }
 
     // TODO: refactor to accept custom regex
